@@ -5,7 +5,16 @@
 ### **Transform Claude Code into a Structured Development Platform**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.9-blue" alt="Version">
+  <a href="https://github.com/hesreallyhim/awesome-claude-code/">
+  <img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Claude Code">
+  </a>
+<a href="https://github.com/SuperClaude-Org/SuperGemini_Framework" target="_blank">
+  <img src="https://img.shields.io/badge/Try-SuperGemini_Framework-blue" alt="Try SuperGemini Framework"/>
+</a>
+<a href="https://github.com/SuperClaude-Org/SuperQwen_Framework" target="_blank">
+  <img src="https://img.shields.io/badge/Try-SuperQwen_Framework-orange" alt="Try SuperQwen Framework"/>
+</a>
+  <img src="https://img.shields.io/badge/version-4.1.1-blue" alt="Version">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
 </p>
@@ -52,8 +61,10 @@
 
 | **Commands** | **Agents** | **Modes** | **MCP Servers** |
 |:------------:|:----------:|:---------:|:---------------:|
-| **22** | **14** | **6** | **6** |
+| **24** | **14** | **6** | **6** |
 | Slash Commands | Specialized AI | Behavioral | Integrations |
+
+Use the new `/sc:help` command to see a full list of all available commands.
 
 </div>
 
@@ -64,6 +75,12 @@
 ## 🎯 **Overview**
 
 SuperClaude is a **meta-programming configuration framework** that transforms Claude Code into a structured development platform through behavioral instruction injection and component orchestration. It provides systematic workflow automation with powerful tools and intelligent agents.
+
+
+## Disclaimer
+
+This project is not affiliated with or endorsed by Anthropic.  
+Claude Code is a product built and maintained by [Anthropic](https://www.anthropic.com/).
 
 ## ⚡ **Quick Installation**
 
@@ -199,7 +216,7 @@ pip install --break-system-packages SuperClaude
 ### 📝 **Improved Namespace**
 **`/sc:` prefix** for all commands:
 - No conflicts with custom commands
-- 22 commands covering full lifecycle
+- 23 commands covering full lifecycle
 - From brainstorming to deployment
 - Clean, organized command structure
 
@@ -285,7 +302,7 @@ pip install --break-system-packages SuperClaude
 <td valign="top">
 
 - 🎯 [**Commands Reference**](Docs/User-Guide/commands.md)  
-  *All 22 slash commands*
+  *All 23 slash commands*
 
 - 🤖 [**Agents Guide**](Docs/User-Guide/agents.md)  
   *14 specialized agents*
@@ -316,10 +333,6 @@ pip install --break-system-packages SuperClaude
 
 </td>
 <td valign="top">
-
-- ✨ [**Best Practices**](Docs/Reference/quick-start-practices.md)  
-  *Pro tips & patterns*
-
 - 📓 [**Examples Cookbook**](Docs/Reference/examples-cookbook.md)  
   *Real-world recipes*
 

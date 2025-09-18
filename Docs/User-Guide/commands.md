@@ -1,6 +1,6 @@
 # SuperClaude Commands Guide
 
-SuperClaude provides 22 commands for Claude Code: `/sc:*` commands for workflows and `@agent-*` for specialists.
+SuperClaude provides 24 commands for Claude Code: `/sc:*` commands for workflows and `@agent-*` for specialists.
 
 ## Command Types
 
@@ -67,7 +67,7 @@ SuperClaude provides behavioral context files that Claude Code reads to adopt sp
 ```bash
 # Verify SuperClaude is working (primary method)
 python3 -m SuperClaude --version
-# Example output: SuperClaude 4.0.9
+# Example output: SuperClaude 4.1.1
 
 # Claude Code CLI version check
 claude --version
@@ -106,7 +106,7 @@ python3 -m SuperClaude install --list-components | grep mcp
 
 - [Essential Commands](#essential-commands) - Start here (8 core commands)
 - [Common Workflows](#common-workflows) - Command combinations that work
-- [Full Command Reference](#full-command-reference) - All 21 commands organized by category
+- [Full Command Reference](#full-command-reference) - All 23 commands organized by category
 - [Troubleshooting](#troubleshooting) - Common issues and solutions
 - [Command Index](#command-index) - Find commands by category
 
@@ -124,6 +124,14 @@ python3 -m SuperClaude install --list-components | grep mcp
 - New project planning: `/sc:brainstorm "e-commerce platform"`
 - Feature exploration: `/sc:brainstorm "user authentication system"`  
 - Problem solving: `/sc:brainstorm "slow database queries"`
+
+### `/sc:help` - Command Reference
+**Purpose**: Displays a list of all available `/sc` commands and their descriptions.
+**Syntax**: `/sc:help`
+
+**Use Cases**:
+- Discovering available commands: `/sc:help`
+- Getting a quick reminder of command names: `/sc:help`
 
 ### `/sc:implement` - Feature Development  
 **Purpose**: Full-stack feature implementation with intelligent specialist routing  
@@ -155,6 +163,19 @@ python3 -m SuperClaude install --list-components | grep mcp
 - Strategic learning: `/sc:business-panel "competitive strategy" --mode socratic`
 
 **Expert Panel**: Christensen, Porter, Drucker, Godin, Kim/Mauborgne, Collins, Taleb, Meadows, Doumont
+
+### `/sc:spec-panel` - Expert Specification Review
+**Purpose**: Multi-expert specification review and improvement using renowned specification and software engineering experts  
+**Syntax**: `/sc:spec-panel [content|@file]` `[--mode discussion|critique|socratic] [--focus requirements|architecture|testing|compliance]`
+
+**Use Cases**:
+- Specification review: `/sc:spec-panel @api_spec.yml --mode critique --focus requirements,architecture`
+- Requirements workshop: `/sc:spec-panel "user story content" --mode discussion`
+- Architecture validation: `/sc:spec-panel @microservice.spec.yml --mode socratic --focus architecture`
+- Compliance review: `/sc:spec-panel @security_requirements.yml --focus compliance`
+- Iterative improvement: `/sc:spec-panel @complex_system.spec.yml --iterations 3`
+
+**Expert Panel**: Wiegers, Adzic, Cockburn, Fowler, Nygard, Newman, Hohpe, Crispin, Gregory, Hightower
 
 ### `/sc:troubleshoot` - Problem Diagnosis
 **Purpose**: Systematic issue diagnosis with root cause analysis  
@@ -235,6 +256,13 @@ python3 -m SuperClaude install --list-components | grep mcp
 /sc:improve --fix --safe-mode         # Apply targeted fixes
 ```
 
+### Specification Development
+```bash
+/sc:spec-panel @existing_spec.yml --mode critique  # Expert review
+/sc:spec-panel @improved_spec.yml --iterations 2    # Iterative refinement
+/sc:document --type technical                        # Generate documentation
+```
+
 ## Full Command Reference
 
 ### Development Commands
@@ -250,6 +278,7 @@ python3 -m SuperClaude install --list-components | grep mcp
 |---------|---------|----------|
 | **analyze** | Code assessment | Quality audits, security reviews |
 | **business-panel** | Strategic analysis | Business decisions, competitive assessment |
+| **spec-panel** | Specification review | Requirements validation, architecture analysis |
 | **troubleshoot** | Problem diagnosis | Bug investigation, performance issues |
 | **explain** | Code explanation | Learning, code reviews |
 
@@ -271,6 +300,7 @@ python3 -m SuperClaude install --list-components | grep mcp
 ### Utility Commands
 | Command | Purpose | Best For |
 |---------|---------|----------|
+| **help** | List all commands | Discovering available commands |
 | **git** | Version control | Commit management, branch strategies |
 | **index** | Command discovery | Exploring capabilities, finding commands |
 
@@ -289,14 +319,14 @@ python3 -m SuperClaude install --list-components | grep mcp
 **By Function:**
 - **Planning**: brainstorm, design, workflow, estimate
 - **Development**: implement, build, git
-- **Analysis**: analyze, business-panel, troubleshoot, explain  
+- **Analysis**: analyze, business-panel, spec-panel, troubleshoot, explain  
 - **Quality**: improve, cleanup, test, document
 - **Management**: task, spawn, load, save, reflect
-- **Utility**: index, select-tool
+- **Utility**: help, index, select-tool
 
 **By Complexity:**
-- **Beginner**: brainstorm, implement, analyze, test
-- **Intermediate**: workflow, design, business-panel, improve, document  
+- **Beginner**: brainstorm, implement, analyze, test, help
+- **Intermediate**: workflow, design, business-panel, spec-panel, improve, document  
 - **Advanced**: spawn, task, select-tool, reflect
 
 ## Troubleshooting
